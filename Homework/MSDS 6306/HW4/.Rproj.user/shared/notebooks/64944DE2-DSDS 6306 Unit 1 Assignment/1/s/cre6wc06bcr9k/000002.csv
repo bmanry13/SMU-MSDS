@@ -1,0 +1,5 @@
+"0","```r
+rNormVector <- rnorm(15)
+mean(rNormVector)
+sd(rNormVector)
+```"

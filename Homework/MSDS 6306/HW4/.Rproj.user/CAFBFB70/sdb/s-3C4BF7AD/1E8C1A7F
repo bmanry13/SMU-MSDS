@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"MSDS 6306: Introduction to Data Science - Live session Unit 01 Assignment\"\noutput: word_document\n---\n### 1)\na. log(10) = ```r log(10)```\nb. ?log(): description says that log() default is the natural log. Using base 10: log(10, base = 10) = ```r log(10, base = 10)```\nc. Log(-10) = ```r log(-10)``` Cannot take the log of a negative number. The log curve is asymptotic to negative infinity as x approaches zero(log(0) = ```r log(0)```\nd. sqrt(4) = ```r sqrt(4)```\n\n### 2)\na. \n```{r}\nrNormVector <- rnorm(15)\nmean(rNormVector)\nsd(rNormVector)\n```\n\nb. \n```{r}\nrNormVector <- rnorm(15,mean = 10,sd = 2)\nmean(rNormVector)\nsd(rNormVector)\n```\n\nc. The values are randomly sampled fromt he distribution so the exact values will not match. As the sample size increases the mean will get closer to the actual mean.\n\n### 3)\n\n```{r}\nindWeight <-  c(60, 72, 57, 90, 95, 72)\nindHeight <- c(1.80, 1.85, 1.72, 1.90, 1.74, 1.91) \nplot(indWeight, indHeight) # Weight and height would seem to be positivly related\nindBMI <- indWeight / sqrt(indHeight)\nsum(mean(indWeight) - indWeight)\n\n```\n\n### 4)\n\n```{r}\nbrychan <- data.frame(\n  area = c(\"computer programming\", \"math\", \"statistics\", \"machine learning\", \"domain expertise\", \n           \"communication and \\npresentation skills\", \"data visualization\"),\n  rank = c(3, 4, 3, 2, 4, 2, 4)\n  )\npar(mar = c(10,2,2,2))\nbarplot(brychan$rank, names.arg = brychan$area,las=2)\n\n\n```\n\n\n### 5)\n\n\n",
+    "created" : 1506972664726.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3425946208",
+    "id" : "1E8C1A7F",
+    "lastKnownWriteTime" : 1504725429,
+    "last_content_update" : 1504725429,
+    "path" : "C:/Users/brych_000/OneDrive/Documents/School/MSDS 6306/DSDS 6306 Unit 1 Assignment.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

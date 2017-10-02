@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages(\"fivethirtyeight\")\nlibrary(fivethirtyeight)\ndata(package = \"fivethirtyeight\")$results[18,\"Item\"]\ncollege_recent_grads <- college_recent_grads\nassign(\"df\", data(list = data(package = \"fivethirtyeight\")$results[18,\"Item\"]))\n\n\n\ncoll\n\nvignette(\"fivethirtyeight\", package = \"fivethirtyeight\")\n\n\n",
+    "created" : 1506971951883.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "389794768",
+    "id" : "76309BCE",
+    "lastKnownWriteTime" : 3833180308419998817,
+    "last_content_update" : 1506973479200,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

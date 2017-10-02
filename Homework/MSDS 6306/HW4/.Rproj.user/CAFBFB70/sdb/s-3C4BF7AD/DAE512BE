@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "url <- \"https://ed-public-download.app.cloud.gov/downloads/Most-Recent-Cohorts-Scorecard-Elements.csv\"\ntmpFile <- tempfile()\ndownload.file(url, tmpFile)\nfile.info(tmpFile)$ctime\ntmpdf <- read.csv(tmpFile)\ndim(tmpdf)\nnames(tmpdf)\nstr(tmpdf)\nunlink(tmpFile)\nrm(list = ls())",
+    "created" : 1506976466340.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4209105712",
+    "id" : "DAE512BE",
+    "lastKnownWriteTime" : 1506284762,
+    "last_content_update" : 1506284762,
+    "path" : "C:/Users/brych_000/OneDrive/Documents/School/MSDS 6306/BManry_LectureUnit5Download.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

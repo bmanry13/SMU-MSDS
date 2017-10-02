@@ -1,0 +1,11 @@
+"0","```r
+brychan <- data.frame(
+  area = c(\"computer programming\", \"math\", \"statistics\", \"machine learning\", \"domain expertise\", 
+           \"communication and \npresentation skills\", \"data visualization\"),
+  rank = c(3, 4, 3, 2, 4, 2, 4)
+  )
+par(mar = c(10,2,2,2))
+barplot(brychan$rank, names.arg = brychan$area,las=2)
+
+
+```"

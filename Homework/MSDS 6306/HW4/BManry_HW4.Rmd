@@ -1,0 +1,67 @@
+---
+title: 'MSDS 6306: Introduction to Data Science - Live session Unit 05 Assignment'
+author: "Brychan Manry"
+output: html_document
+---
+
+## 1) FiveThirtyEight Data
+
+```{r}
+# a. install.packages("fivethirtyeight")
+library(fivethirtyeight)
+
+# b. Assign 18th data set to 
+df <- get(data(package = "fivethirtyeight")$results[18,"Item"])
+
+# c. https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/
+
+# d.
+dim(df)
+names(df)
+
+```
+
+## 2) Data Summary
+```{r}
+# a. 
+names(df)
+length(names(df))
+
+# b.
+major_count <- as.data.frame(table(df$major_category))
+major_count
+
+# c.
+par(las=2, mar=c(3,16,2,2))
+barplot(
+  names.arg = major_count$Var1,
+  height = major_count$Freq,
+  main = "Count of College Majors by Category",
+  horiz=TRUE
+)
+
+# d.
+write.csv(df, "538_college_recent_grads.csv", row.names = FALSE)
+```
+
+## 3) [Codebook](https://github.com/bmanry13/SMU-MSDS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

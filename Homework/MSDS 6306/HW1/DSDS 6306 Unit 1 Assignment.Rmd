@@ -1,0 +1,56 @@
+---
+title: "MSDS 6306: Introduction to Data Science - Live session Unit 01 Assignment"
+output: word_document
+---
+### 1)
+a. log(10) = ```r log(10)```
+b. ?log(): description says that log() default is the natural log. Using base 10: log(10, base = 10) = ```r log(10, base = 10)```
+c. Log(-10) = ```r log(-10)``` Cannot take the log of a negative number. The log curve is asymptotic to negative infinity as x approaches zero(log(0) = ```r log(0)```
+d. sqrt(4) = ```r sqrt(4)```
+
+### 2)
+a. 
+```{r}
+rNormVector <- rnorm(15)
+mean(rNormVector)
+sd(rNormVector)
+```
+
+b. 
+```{r}
+rNormVector <- rnorm(15,mean = 10,sd = 2)
+mean(rNormVector)
+sd(rNormVector)
+```
+
+c. The values are randomly sampled fromt he distribution so the exact values will not match. As the sample size increases the mean will get closer to the actual mean.
+
+### 3)
+
+```{r}
+indWeight <-  c(60, 72, 57, 90, 95, 72)
+indHeight <- c(1.80, 1.85, 1.72, 1.90, 1.74, 1.91) 
+plot(indWeight, indHeight) # Weight and height would seem to be positivly related
+indBMI <- indWeight / sqrt(indHeight)
+sum(mean(indWeight) - indWeight)
+
+```
+
+### 4)
+
+```{r}
+brychan <- data.frame(
+  area = c("computer programming", "math", "statistics", "machine learning", "domain expertise", 
+           "communication and \npresentation skills", "data visualization"),
+  rank = c(3, 4, 3, 2, 4, 2, 4)
+  )
+par(mar = c(10,2,2,2))
+barplot(brychan$rank, names.arg = brychan$area,las=2)
+
+
+```
+
+
+### 5)
+
+

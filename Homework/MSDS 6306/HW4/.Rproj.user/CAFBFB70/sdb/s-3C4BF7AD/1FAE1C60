@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: 'MSDS 6306: Introduction to Data Science - Live session Unit 05 Assignment'\nauthor: \"Brychan Manry\"\noutput: html_document\n---\n\n## 1) FiveThirtyEight Data\n\n```{r}\n# a. install.packages(\"fivethirtyeight\")\nlibrary(fivethirtyeight)\n\n# b. Assign 18th data set to \ndf <- get(data(package = \"fivethirtyeight\")$results[18,\"Item\"])\n\n# c. https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/\n\n# d.\ndim(df)\nnames(df)\n\n```\n\n## 2) Data Summary\n```{r}\n# a. \nnames(df)\nlength(names(df))\n\n# b.\nmajor_count <- as.data.frame(table(df$major_category))\nmajor_count\n\n# c.\npar(las=2, mar=c(3,16,2,2))\nbarplot(\n  names.arg = major_count$Var1,\n  height = major_count$Freq,\n  main = \"Count of College Majors by Category\",\n  horiz=TRUE\n)\n\n# d.\nwrite.csv(df, \"538_college_recent_grads.csv\", row.names = FALSE)\n```\n\n## 3) [Codebook](https://github.com/bmanry13/SMU-MSDS)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "created" : 1506972707472.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "994012390",
+    "id" : "1FAE1C60",
+    "lastKnownWriteTime" : 1506976388,
+    "last_content_update" : 1506976388925,
+    "path" : "C:/Users/brych_000/OneDrive/Documents/School/MSDS 6306/HW4/BManry_HW4.Rmd",
+    "project_path" : "BManry_HW4.Rmd",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

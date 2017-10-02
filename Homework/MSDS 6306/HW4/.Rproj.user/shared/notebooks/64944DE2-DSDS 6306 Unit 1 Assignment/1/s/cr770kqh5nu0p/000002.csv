@@ -1,0 +1,8 @@
+"0","```r
+indWeight <-  c(60, 72, 57, 90, 95, 72)
+indHeight <- c(1.80, 1.85, 1.72, 1.90, 1.74, 1.91) 
+plot(indWeight, indHeight) # Weight and height would seem to be positivly related
+indBMI <- indWeight / sqrt(indHeight)
+sum(mean(indWeight) - indWeight)
+
+```"
