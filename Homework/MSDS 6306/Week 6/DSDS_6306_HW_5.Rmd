@@ -1,0 +1,77 @@
+---
+title: 'MSDS 6306: Introduction to Data Science - Tidy Data Assignment 05'
+author: "Brychan Manry"
+date: "October 9, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Data Munging
+
+```{r yob2016}
+#a
+df <- read.table("./rawdata/yob2016.txt", sep = ";")
+names(df) <- c("first.name", "gender", "n.children.2016")
+
+#b
+summary(df)
+str(df)
+
+#c
+names.to.remove <- grep("yyy$", df$first.name, value = TRUE)
+names.to.remove
+
+#d
+df <- df[!df$first.name%in%names.to.remove,  ]
+y2016 <- df
+
+#cleanup 
+rm(df)
+```
+
+## 2. Data Merging
+
+```{r yob2015}
+#a
+y2015 <- read.table("./rawdata/yob2015.txt", sep = ",")
+names(y2015) <- c("first.name", "gender", "n.children.2015")
+
+#b
+tail(y2015, 10)
+print("All of the names have the same gender and count")
+
+#c
+final <- merge(y2016, y2015,by = c("first.name", "gender") ,all = FALSE)
+```
+
+
+## 3. Data Summary
+```{r}
+#a
+final$Total <- final$n.children.2016 + final$n.children.2015
+sum(final$Total)
+
+#b
+final <- final[order(final$Total, decreasing = TRUE), ]
+
+head(final, 10)
+
+#c
+head(final[final$gender == "F", ], 10)
+
+#d
+write.csv(head(final[final$gender == "F", c("first.name","Total")], 10),  "top10_girls_names_2015-16.csv", row.names = FALSE)
+```
+
+
+
+
+
+
+
+
+
+

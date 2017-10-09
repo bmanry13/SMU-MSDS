@@ -1,0 +1,54 @@
+---
+title: 'MSDS 6306: Introduction to Data Science - Tidy Data Assignment 05'
+author: "Brychan Manry"
+date: "October 9, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Data Munging
+
+```{r yob2016}
+#a
+getwd()
+df <- read.table("yob2016.txt", sep = ";")
+names(df) <- c("first.name", "gender", "n.children")
+
+#b
+summary(df)
+str(df)
+
+#c
+names.to.remove <- grep("yyy$", tolower(df$first.name), value = TRUE)
+names.to.remove
+
+#d
+df <- df[df$first.name %in% names.to.remove,  ]
+y2016 <- df
+
+#cleanup 
+rm(df)
+
+```
+
+## 2. Data Merging
+
+```{r yob2015}
+df <- read.table("C:/Users/brych_000/Documents/GitHub/SMU-MSDS/Homework/MSDS 6306/Week 6/yob2015.txt", sep = ";")
+
+```
+
+
+
+
+
+
+
+
+
+
+
+

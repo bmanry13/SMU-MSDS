@@ -1,0 +1,19 @@
+This project finds the top 10 girls names from 2015-2016
+
+Output: top10_girls_names_2015-16.csv - csv file containing the top-10 girls names from 2015-2016 including total children with name
+- columns "first.name" character; "Total" numeric
+
+1) Ingests 2016 Girls Names
+- ingest txt file (delimiter = ";")
+- name columns
+- filter out error name ending with "Fionayyy"
+
+2) Ingests 2015 Girls Names and join to 2016
+- ingest txt file (delimiter = ","
+- name columns
+- join 2016 and 2015 by name and gender
+
+3) Find and Keep top-10 girls names
+- Calculate Total
+- Find top 10
+- save csv with top-10 names with totals
