@@ -67,6 +67,9 @@ write.csv(head(final[final$gender == "F", c("first.name","Total")], 10),  "top10
 ```
 
 
+## 4. Github url
+https://github.com/bmanry13/SMU-MSDS/tree/master/Homework/MSDS%206306/Week%206
+
 
 
 
